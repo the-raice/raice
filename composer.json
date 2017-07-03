@@ -1,1 +1,12 @@
-
+{
+    "name": "the-raice/raice",
+    "description": "The Raice Framework.",
+    "keywords": ["framework", "raice", "PHP"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "the-raice/framework": "dev-master"
+    },
+    "minimum-stability": "stable"
+}
