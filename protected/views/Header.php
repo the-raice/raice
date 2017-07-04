@@ -7,6 +7,6 @@
 </head>
 <body>
     <header>
-        <h1 class="content__title">The Raice Framework</h1>
+        <h1 class="header__title">The Raice Framework</h1>
     </header>
     <div class="content">
