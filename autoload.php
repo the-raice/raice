@@ -1,10 +1,10 @@
 <?php
 
-function __autoload ( $class ) {
+function __autoload( $class ) {
     
     if ( file_exists( $class . '.php' ) ) {
           
-          require_once $class . '.php';
+          require_once 'protected/' . $class . '.php';
          
     } else {
           
