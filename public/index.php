@@ -12,4 +12,4 @@ require '../env.php';
 require __DIR__ . '/../autoload.php';
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = new \Raice\Bootstrap( ROOT_PATH );
+$app = new \Raice\Bootstrap();
