@@ -1,15 +1,21 @@
 <?php
 
-function __autoload( $class ) {
-    
-    if ( file_exists( $class . '.php' ) ) {
-          
-          require_once 'protected/' . $class . '.php';
-         
+namespace Raice;
+
+function autoload ($class) {
+        
+    if ( file_exists( ROOT_PATH . 'protected/' . $class . '.php' ) ) {
+      
+        require_once ROOT_PATH . 'protected/' . $class . '.php';
+        return true;
+     
     } else {
-          
-          throw new \Exception('The ' . $class . ' class doesn\'t exist!');
+        
+        throw new \Exception('The ' . $class . ' class doesn\'t exist!');
+        return false;
           
     }
-      
-} 
+        
+}
+    
+spl_autoload_register('Raice\autoload');
