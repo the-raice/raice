@@ -8,7 +8,7 @@ class Article
   extends Model
 {
 
-  protected TABLE = 'articles';
+  protected const TABLE = 'articles';
   
   public $title;
   public $content;
