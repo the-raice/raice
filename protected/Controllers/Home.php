@@ -4,7 +4,7 @@ namespace Controllers;
 
 use Raice\Controller as Controller;
     
-class Welcome extends Controller
+class Home extends Controller
 {
     
     public function __construct ()
