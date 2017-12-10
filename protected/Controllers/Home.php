@@ -4,10 +4,11 @@ namespace Controllers;
 
 use Raice\Controller as Controller;
     
-class Home extends Controller
+class Home
+    extends Controller
 {
     
-    public function __construct ()
+    public function index ()
     {
   
         parent::__construct( $this->getName() );
