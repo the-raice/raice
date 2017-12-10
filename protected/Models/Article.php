@@ -3,14 +3,14 @@
 namespace Models;
 
 use Raice\Model as Model;
-    
+        
 class Article 
-  extends Model
+    extends Model
 {
 
-  const TABLE = 'articles';
-  
-  public $title;
-  public $content;
+    const TABLE = 'articles';
+    
+    public $title;
+    public $content;
 
 }
