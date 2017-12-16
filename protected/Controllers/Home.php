@@ -10,8 +10,8 @@ class Home
     
     public function index ()
     {
-  
-        parent::__construct( $this->getName() );
+
+       parent::getView( $this->getName() );
         
     }
     
