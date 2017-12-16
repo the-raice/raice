@@ -10,7 +10,11 @@ class Article
 
     const TABLE = 'articles';
     
+    public $id;
     public $title;
     public $content;
+    public $date;
+    public $author_id;
+    public $url;
 
 }
