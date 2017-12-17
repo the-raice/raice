@@ -15,5 +15,32 @@ class User
     public $last_name;
     public $image;
     public $url;
+    
+    public function getUserInfo( $id )
+    {
+        
+        $user = parent::getOneById( $id );
+        return $user;
+        
+    }
+    
+    public function isEditor( $id, $author_id )
+    {
+        
+        session_start();
+        
+        $user = self::getUserInfo( $_SESSION['authorized'] );
+        
+        if ( ( $author_id == $_SESSION['authorized'] ) || ( $user['role'] == 'admin' ) ) {
+         
+            return true;
+            
+        } else {
+            
+            return false;
+            
+        }
+        
+    }
 
 }
