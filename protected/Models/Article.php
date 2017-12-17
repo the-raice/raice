@@ -16,5 +16,6 @@ class Article
     public $date;
     public $author_id;
     public $url;
+    public $lead;
 
 }
