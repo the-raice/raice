@@ -3,7 +3,6 @@
 namespace Controllers;
 
 use Raice\Controller as Controller;
-use Models\User as User;
     
 class User
     extends Controller
