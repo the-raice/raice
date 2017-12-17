@@ -12,23 +12,17 @@ class Article
     
     public $article;
     
-    public function __call ( $id, $arguments = false )
+    public function __call ( $url, $arguments = false )
     {
         
-        $id = (int) $id;
+        session_start();
         
-        if ( is_integer( $id ) && $id !== 0 ) {
-            
-            $this->article = \Models\Article::getOneById( $id );
-            
-        } else {
-            
-            $url = strtolower( $id );
+        $url = strtolower( $url);
 
-            $this->article = \Models\Article::getOneByField( $url, 'url' );
-            
-        }
+        $this->article = \Models\Article::getOneByField( $url, 'url' )[0];
         
+        parent::getView( $this->getName(), $this->article );
+
     }
     
 }
