@@ -21,7 +21,7 @@ class User
         
         session_start();
         
-        $user = self::getUserInfo( $_SESSION['authorized'] );
+        $user = self::getOneById( $_SESSION['authorized'] );
         
         if ( ( $author_id == $_SESSION['authorized'] ) || ( $user['role'] == 'admin' ) ) {
          
