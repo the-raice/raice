@@ -10,8 +10,8 @@
                        <h3><?=$data['date'] ?></h3>
                     </li>
                     <li>
-                        <img class="author__image" src="<?=Models\User::getUserInfo( $data['author_id'] )[0]['image'] ?>">
-                        <a class="metabar__option" href="/user/<?=Models\User::getUserInfo( $data['author_id'] )[0]['username'] ?>"><h3><?=Models\User::getUserInfo( $data['author_id'] )[0]['username'] ?></h3>
+                        <img class="author__image" src="<?=Models\User::getOneById( $data['author_id'] )[0]['image'] ?>">
+                        <a class="metabar__option" href="/user/<?=Models\User::getOneById( $data['author_id'] )[0]['username'] ?>"><h3><?=Models\User::getUserInfo( $data['author_id'] )[0]['username'] ?></h3>
                     </li>
 <?php if ( Models\User::isEditor( $_SESSION['authorized'], $data['author_id'] ) ): ?>
                     <li>
