@@ -25,4 +25,28 @@ class Article
 
     }
     
+    public function edit ()
+    {
+     
+        if ( User::isEditor( $_SESSION['authorized'] ) ) {
+
+            $this->article = \Models\Article::getOneByField( $url, 'url' )[0];
+               
+            parent::getView( $this->getName(), $this->article );
+            
+        }
+        
+    }
+    
+    public function delete()
+    {
+     
+        if ( User::isEditor( $_SESSION['authorized'] ) ) {
+
+            \Models\Article::deleteOneByField( $url, 'url' );
+            
+        }
+        
+    }
+    
 }
