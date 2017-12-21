@@ -16,14 +16,6 @@ class User
     public $image;
     public $url;
     
-    public function getUserInfo( $id )
-    {
-        
-        $user = parent::getOneById( $id );
-        return $user;
-        
-    }
-    
     public function isEditor( $id, $author_id )
     {
         
