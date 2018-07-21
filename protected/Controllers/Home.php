@@ -11,7 +11,7 @@ class Home
     public function index ()
     {
 
-       parent::getView( $this->getName() );
+       parent::getView( $this->getName(), 'The Raice Framework' );
         
     }
     
