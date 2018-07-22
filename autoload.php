@@ -9,11 +9,6 @@ function autoload ($class) {
         require_once ROOT_PATH . 'protected/' . $class . '.php';
         return true;
      
-    } else {
-        
-        throw new \Exception('The ' . $class . ' class doesn\'t exist!');
-        return false;
-          
     }
         
 }
